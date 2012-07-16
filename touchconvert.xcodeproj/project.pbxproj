@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83847A5D15B0AA27007AB04B /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 83847A5C15B0AA27007AB04B /* Gesture.m */; };
+		83847A6C15B0ADAC007AB04B /* Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 83847A6B15B0ADAC007AB04B /* Touch.m */; };
+		83847A6F15B0B028007AB04B /* GestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83847A6E15B0B028007AB04B /* GestureRecognizer.m */; };
+		83CB06A115AFB4B8002ACFAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CB06A015AFB4B8002ACFAD /* Foundation.framework */; };
+		83CB06A415AFB4B8002ACFAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB06A315AFB4B8002ACFAD /* main.m */; };
+		83CB06A815AFB4B8002ACFAD /* touchconvert.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83CB06A715AFB4B8002ACFAD /* touchconvert.1 */; };
+		83CB06BE15AFB8ED002ACFAD /* TouchConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB06BD15AFB8ED002ACFAD /* TouchConverter.m */; };
+		83CB06C315AFBCA2002ACFAD /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB06C215AFBC2E002ACFAD /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83CB069A15AFB4B8002ACFAD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				83CB06A815AFB4B8002ACFAD /* touchconvert.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		83847A5B15B0AA27007AB04B /* Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gesture.h; sourceTree = "<group>"; };
+		83847A5C15B0AA27007AB04B /* Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gesture.m; sourceTree = "<group>"; };
+		83847A6A15B0ADAC007AB04B /* Touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Touch.h; sourceTree = "<group>"; };
+		83847A6B15B0ADAC007AB04B /* Touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Touch.m; sourceTree = "<group>"; };
+		83847A6D15B0B028007AB04B /* GestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognizer.h; sourceTree = "<group>"; };
+		83847A6E15B0B028007AB04B /* GestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizer.m; sourceTree = "<group>"; };
+		83A1BCE115B4B067003C0F5E /* session_54289_touchtrack.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = session_54289_touchtrack.plist; sourceTree = "<group>"; };
+		83CB069C15AFB4B8002ACFAD /* touchconvert */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = touchconvert; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CB06A015AFB4B8002ACFAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		83CB06A315AFB4B8002ACFAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83CB06A615AFB4B8002ACFAD /* touchconvert-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "touchconvert-Prefix.pch"; sourceTree = "<group>"; };
+		83CB06A715AFB4B8002ACFAD /* touchconvert.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = touchconvert.1; sourceTree = "<group>"; };
+		83CB06BB15AFB71B002ACFAD /* session_30203_touchtrack.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = session_30203_touchtrack.plist; sourceTree = "<group>"; };
+		83CB06BC15AFB8ED002ACFAD /* TouchConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchConverter.h; sourceTree = "<group>"; };
+		83CB06BD15AFB8ED002ACFAD /* TouchConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchConverter.m; sourceTree = "<group>"; };
+		83CB06C115AFBC2E002ACFAD /* JSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		83CB06C215AFBC2E002ACFAD /* JSONKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83CB069915AFB4B8002ACFAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CB06A115AFB4B8002ACFAD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83CB069115AFB4B8002ACFAD = {
+			isa = PBXGroup;
+			children = (
+				83CB06A215AFB4B8002ACFAD /* touchconvert */,
+				83CB06BA15AFB708002ACFAD /* SampleData */,
+				83CB06BF15AFBC2E002ACFAD /* Libraries */,
+				83CB069F15AFB4B8002ACFAD /* Frameworks */,
+				83CB069D15AFB4B8002ACFAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83CB069D15AFB4B8002ACFAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83CB069C15AFB4B8002ACFAD /* touchconvert */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83CB069F15AFB4B8002ACFAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83CB06A015AFB4B8002ACFAD /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83CB06A215AFB4B8002ACFAD /* touchconvert */ = {
+			isa = PBXGroup;
+			children = (
+				83CB06BC15AFB8ED002ACFAD /* TouchConverter.h */,
+				83CB06BD15AFB8ED002ACFAD /* TouchConverter.m */,
+				83847A6D15B0B028007AB04B /* GestureRecognizer.h */,
+				83847A6E15B0B028007AB04B /* GestureRecognizer.m */,
+				83847A5B15B0AA27007AB04B /* Gesture.h */,
+				83847A5C15B0AA27007AB04B /* Gesture.m */,
+				83847A6A15B0ADAC007AB04B /* Touch.h */,
+				83847A6B15B0ADAC007AB04B /* Touch.m */,
+				83CB06A315AFB4B8002ACFAD /* main.m */,
+				83CB06A715AFB4B8002ACFAD /* touchconvert.1 */,
+				83CB06A515AFB4B8002ACFAD /* Supporting Files */,
+			);
+			path = touchconvert;
+			sourceTree = "<group>";
+		};
+		83CB06A515AFB4B8002ACFAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83CB06A615AFB4B8002ACFAD /* touchconvert-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83CB06BA15AFB708002ACFAD /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				83CB06BB15AFB71B002ACFAD /* session_30203_touchtrack.plist */,
+				83A1BCE115B4B067003C0F5E /* session_54289_touchtrack.plist */,
+			);
+			path = SampleData;
+			sourceTree = "<group>";
+		};
+		83CB06BF15AFBC2E002ACFAD /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				83CB06C015AFBC2E002ACFAD /* JSONKit */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		83CB06C015AFBC2E002ACFAD /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				83CB06C115AFBC2E002ACFAD /* JSONKit.h */,
+				83CB06C215AFBC2E002ACFAD /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83CB069B15AFB4B8002ACFAD /* touchconvert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CB06AB15AFB4B8002ACFAD /* Build configuration list for PBXNativeTarget "touchconvert" */;
+			buildPhases = (
+				83CB069815AFB4B8002ACFAD /* Sources */,
+				83CB069915AFB4B8002ACFAD /* Frameworks */,
+				83CB069A15AFB4B8002ACFAD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = touchconvert;
+			productName = touchconvert;
+			productReference = 83CB069C15AFB4B8002ACFAD /* touchconvert */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CB069315AFB4B8002ACFAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Pipely Inc.";
+			};
+			buildConfigurationList = 83CB069615AFB4B8002ACFAD /* Build configuration list for PBXProject "touchconvert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 83CB069115AFB4B8002ACFAD;
+			productRefGroup = 83CB069D15AFB4B8002ACFAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83CB069B15AFB4B8002ACFAD /* touchconvert */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83CB069815AFB4B8002ACFAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CB06A415AFB4B8002ACFAD /* main.m in Sources */,
+				83CB06BE15AFB8ED002ACFAD /* TouchConverter.m in Sources */,
+				83CB06C315AFBCA2002ACFAD /* JSONKit.m in Sources */,
+				83847A5D15B0AA27007AB04B /* Gesture.m in Sources */,
+				83847A6C15B0ADAC007AB04B /* Touch.m in Sources */,
+				83847A6F15B0B028007AB04B /* GestureRecognizer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		83CB06A915AFB4B8002ACFAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		83CB06AA15AFB4B8002ACFAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		83CB06AC15AFB4B8002ACFAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "touchconvert/touchconvert-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "Libraries/**";
+			};
+			name = Debug;
+		};
+		83CB06AD15AFB4B8002ACFAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "touchconvert/touchconvert-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "Libraries/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83CB069615AFB4B8002ACFAD /* Build configuration list for PBXProject "touchconvert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CB06A915AFB4B8002ACFAD /* Debug */,
+				83CB06AA15AFB4B8002ACFAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CB06AB15AFB4B8002ACFAD /* Build configuration list for PBXNativeTarget "touchconvert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CB06AC15AFB4B8002ACFAD /* Debug */,
+				83CB06AD15AFB4B8002ACFAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CB069315AFB4B8002ACFAD /* Project object */;
+}
