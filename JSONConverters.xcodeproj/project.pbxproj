@@ -19,7 +19,6 @@
 		83E1C44215B4CFDC00FAAE4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1C44115B4CFDC00FAAE4E /* main.m */; };
 		83E1C44615B4CFDC00FAAE4E /* eventconvert.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83E1C44515B4CFDC00FAAE4E /* eventconvert.1 */; };
 		83E1C44B15B4D0B200FAAE4E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB06C215AFBC2E002ACFAD /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		83E1C45815B4D3AC00FAAE4E /* EventConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1C45715B4D3AC00FAAE4E /* EventConverter.m */; };
 		83E1C45D15B4D46200FAAE4E /* JSONConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1C45C15B4D46200FAAE4E /* JSONConverter.m */; };
 		83E1C45E15B4D46200FAAE4E /* JSONConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1C45C15B4D46200FAAE4E /* JSONConverter.m */; };
 /* End PBXBuildFile section */
@@ -68,8 +67,6 @@
 		83E1C44115B4CFDC00FAAE4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83E1C44415B4CFDC00FAAE4E /* eventconvert-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eventconvert-Prefix.pch"; sourceTree = "<group>"; };
 		83E1C44515B4CFDC00FAAE4E /* eventconvert.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = eventconvert.1; sourceTree = "<group>"; };
-		83E1C45615B4D3AC00FAAE4E /* EventConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventConverter.h; sourceTree = "<group>"; };
-		83E1C45715B4D3AC00FAAE4E /* EventConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventConverter.m; sourceTree = "<group>"; };
 		83E1C45B15B4D46200FAAE4E /* JSONConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONConverter.h; sourceTree = "<group>"; };
 		83E1C45C15B4D46200FAAE4E /* JSONConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONConverter.m; sourceTree = "<group>"; };
 		83E1C46A15B4DB4000FAAE4E /* session_54289_eventtrack.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = session_54289_eventtrack.plist; sourceTree = "<group>"; };
@@ -181,8 +178,6 @@
 		83E1C44015B4CFDC00FAAE4E /* eventconvert */ = {
 			isa = PBXGroup;
 			children = (
-				83E1C45615B4D3AC00FAAE4E /* EventConverter.h */,
-				83E1C45715B4D3AC00FAAE4E /* EventConverter.m */,
 				83E1C44115B4CFDC00FAAE4E /* main.m */,
 				83E1C44515B4CFDC00FAAE4E /* eventconvert.1 */,
 				83E1C44315B4CFDC00FAAE4E /* Supporting Files */,
@@ -292,7 +287,6 @@
 			files = (
 				83E1C44215B4CFDC00FAAE4E /* main.m in Sources */,
 				83E1C44B15B4D0B200FAAE4E /* JSONKit.m in Sources */,
-				83E1C45815B4D3AC00FAAE4E /* EventConverter.m in Sources */,
 				83E1C45E15B4D46200FAAE4E /* JSONConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

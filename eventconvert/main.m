@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EventConverter.h"
+#import "JSONConverter.h"
 
 int main(int argc, const char * argv[])
 {
@@ -17,7 +17,7 @@ int main(int argc, const char * argv[])
             return 1;
         }
         
-        EventConverter *eventConverter = [[EventConverter alloc] init];
+        JSONConverter *eventConverter = [[JSONConverter alloc] init];
         eventConverter.inputFilePath = [NSString stringWithCString:argv[1] encoding:NSUTF8StringEncoding];
         eventConverter.outputFilePath = (argc == 2 ? nil : [NSString stringWithCString:argv[2] encoding:NSUTF8StringEncoding]);
         if (![eventConverter convert]) {
