@@ -1,4 +1,6 @@
-touchconvert
-============
+jsonconverters
+==============
 
-Converts plist touches to JSON gestures.
+* touchconvert: Takes touch plist, performs gesture processing, outputs to JSON
+* eventconvert: Takes event plist, outputs to JSON
+
