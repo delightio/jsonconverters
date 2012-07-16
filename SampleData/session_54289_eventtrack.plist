@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>events</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>View account</string>
+			<key>properties</key>
+			<dict>
+				<key>Name</key>
+				<string>Brianna Black</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Add account button pressed</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Account Created</string>
+			<key>properties</key>
+			<dict>
+				<key>Email</key>
+				<string>john@smith.com</string>
+				<key>Name</key>
+				<string>John Smith</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>View account</string>
+			<key>properties</key>
+			<dict>
+				<key>Name</key>
+				<string>Natalie Navy</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

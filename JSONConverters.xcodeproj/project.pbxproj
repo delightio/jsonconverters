@@ -19,6 +19,9 @@
 		83E1C44215B4CFDC00FAAE4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1C44115B4CFDC00FAAE4E /* main.m */; };
 		83E1C44615B4CFDC00FAAE4E /* eventconvert.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83E1C44515B4CFDC00FAAE4E /* eventconvert.1 */; };
 		83E1C44B15B4D0B200FAAE4E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB06C215AFBC2E002ACFAD /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		83E1C45815B4D3AC00FAAE4E /* EventConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1C45715B4D3AC00FAAE4E /* EventConverter.m */; };
+		83E1C45D15B4D46200FAAE4E /* JSONConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1C45C15B4D46200FAAE4E /* JSONConverter.m */; };
+		83E1C45E15B4D46200FAAE4E /* JSONConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E1C45C15B4D46200FAAE4E /* JSONConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,7 +60,6 @@
 		83CB06A315AFB4B8002ACFAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83CB06A615AFB4B8002ACFAD /* touchconvert-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "touchconvert-Prefix.pch"; sourceTree = "<group>"; };
 		83CB06A715AFB4B8002ACFAD /* touchconvert.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = touchconvert.1; sourceTree = "<group>"; };
-		83CB06BB15AFB71B002ACFAD /* session_30203_touchtrack.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = session_30203_touchtrack.plist; sourceTree = "<group>"; };
 		83CB06BC15AFB8ED002ACFAD /* TouchConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchConverter.h; sourceTree = "<group>"; };
 		83CB06BD15AFB8ED002ACFAD /* TouchConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchConverter.m; sourceTree = "<group>"; };
 		83CB06C115AFBC2E002ACFAD /* JSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -66,6 +68,11 @@
 		83E1C44115B4CFDC00FAAE4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83E1C44415B4CFDC00FAAE4E /* eventconvert-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eventconvert-Prefix.pch"; sourceTree = "<group>"; };
 		83E1C44515B4CFDC00FAAE4E /* eventconvert.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = eventconvert.1; sourceTree = "<group>"; };
+		83E1C45615B4D3AC00FAAE4E /* EventConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventConverter.h; sourceTree = "<group>"; };
+		83E1C45715B4D3AC00FAAE4E /* EventConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventConverter.m; sourceTree = "<group>"; };
+		83E1C45B15B4D46200FAAE4E /* JSONConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONConverter.h; sourceTree = "<group>"; };
+		83E1C45C15B4D46200FAAE4E /* JSONConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONConverter.m; sourceTree = "<group>"; };
+		83E1C46A15B4DB4000FAAE4E /* session_54289_eventtrack.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = session_54289_eventtrack.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +100,8 @@
 			children = (
 				83CB06A215AFB4B8002ACFAD /* touchconvert */,
 				83E1C44015B4CFDC00FAAE4E /* eventconvert */,
+				83E1C45A15B4D45700FAAE4E /* Shared */,
+				83CB06BA15AFB708002ACFAD /* Sample Data */,
 				83CB06BF15AFBC2E002ACFAD /* Libraries */,
 				83CB069F15AFB4B8002ACFAD /* Frameworks */,
 				83CB069D15AFB4B8002ACFAD /* Products */,
@@ -129,7 +138,6 @@
 				83847A6B15B0ADAC007AB04B /* Touch.m */,
 				83CB06A315AFB4B8002ACFAD /* main.m */,
 				83CB06A715AFB4B8002ACFAD /* touchconvert.1 */,
-				83CB06BA15AFB708002ACFAD /* Sample Data */,
 				83CB06A515AFB4B8002ACFAD /* Supporting Files */,
 			);
 			path = touchconvert;
@@ -146,8 +154,8 @@
 		83CB06BA15AFB708002ACFAD /* Sample Data */ = {
 			isa = PBXGroup;
 			children = (
-				83CB06BB15AFB71B002ACFAD /* session_30203_touchtrack.plist */,
 				83A1BCE115B4B067003C0F5E /* session_54289_touchtrack.plist */,
+				83E1C46A15B4DB4000FAAE4E /* session_54289_eventtrack.plist */,
 			);
 			name = "Sample Data";
 			path = SampleData;
@@ -173,6 +181,8 @@
 		83E1C44015B4CFDC00FAAE4E /* eventconvert */ = {
 			isa = PBXGroup;
 			children = (
+				83E1C45615B4D3AC00FAAE4E /* EventConverter.h */,
+				83E1C45715B4D3AC00FAAE4E /* EventConverter.m */,
 				83E1C44115B4CFDC00FAAE4E /* main.m */,
 				83E1C44515B4CFDC00FAAE4E /* eventconvert.1 */,
 				83E1C44315B4CFDC00FAAE4E /* Supporting Files */,
@@ -186,6 +196,15 @@
 				83E1C44415B4CFDC00FAAE4E /* eventconvert-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83E1C45A15B4D45700FAAE4E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				83E1C45B15B4D46200FAAE4E /* JSONConverter.h */,
+				83E1C45C15B4D46200FAAE4E /* JSONConverter.m */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +282,7 @@
 				83847A5D15B0AA27007AB04B /* Gesture.m in Sources */,
 				83847A6C15B0ADAC007AB04B /* Touch.m in Sources */,
 				83847A6F15B0B028007AB04B /* GestureRecognizer.m in Sources */,
+				83E1C45D15B4D46200FAAE4E /* JSONConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +292,8 @@
 			files = (
 				83E1C44215B4CFDC00FAAE4E /* main.m in Sources */,
 				83E1C44B15B4D0B200FAAE4E /* JSONKit.m in Sources */,
+				83E1C45815B4D3AC00FAAE4E /* EventConverter.m in Sources */,
+				83E1C45E15B4D46200FAAE4E /* JSONConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +413,7 @@
 				83E1C44815B4CFDC00FAAE4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

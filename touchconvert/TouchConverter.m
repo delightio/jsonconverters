@@ -12,45 +12,10 @@
 
 @implementation TouchConverter
 
-@synthesize inputFilePath = _inputFilePath;
-@synthesize outputFilePath = _outputFilePath;
-
-- (BOOL)convert
+- (NSDictionary *)processDictionary:(NSDictionary *)inputDictionary
 {
-    // Read input plist
-    NSDictionary *touchesDict = [NSDictionary dictionaryWithContentsOfFile:self.inputFilePath];
-    if (!touchesDict) {
-        NSLog(@"Unable to read input file: %@", self.inputFilePath);
-        return NO; 
-    }
-    
-    // Convert to gestures
-    NSArray *touchDicts = [touchesDict objectForKey:@"touches"];
-    NSArray *gestures = [self gesturesForTouchDicts:touchDicts];
-    
-    // Convert to dictionary
-    NSMutableArray *gestureDicts = [NSMutableArray arrayWithCapacity:[gestures count]];
-    for (Gesture *gesture in gestures) {
-        NSDictionary *gestureDict = [gesture dictionaryRepresentation];
-        [gestureDicts addObject:gestureDict];
-    }
-    NSDictionary *gesturesDict = [NSDictionary dictionaryWithObject:gestureDicts forKey:@"gestures"];
-    
-    // Write output JSON to file or standard output
-    if (self.outputFilePath) {
-        if (![[gesturesDict JSONData] writeToFile:self.outputFilePath atomically:YES]) {
-            NSLog(@"Unable to write to output file: %@", self.outputFilePath);
-            return NO; 
-        }
-    } else {
-        printf("%s\n", [[gesturesDict JSONString] UTF8String]);
-    }
-    
-    return YES;
-}
-
-- (NSArray *)gesturesForTouchDicts:(NSArray *)touchDicts
-{
+    // Convert touch dictionary to Touch objects
+    NSArray *touchDicts = [inputDictionary objectForKey:@"touches"];
     NSMutableArray *touches = [NSMutableArray arrayWithCapacity:[touchDicts count]];
     for (NSDictionary *touchDict in touchDicts) {
         Touch *touch = [[Touch alloc] initWithLocation:NSPointFromString([touchDict objectForKey:@"curLoc"]) 
@@ -61,7 +26,17 @@
         [touches addObject:touch];
     }
     
-    return [GestureRecognizer gesturesForTouches:touches];
+    // Detect gestures from touches
+    NSArray *gestures = [GestureRecognizer gesturesForTouches:touches];
+    
+    // Convert gestures to dictionary representation
+    NSMutableArray *gestureDicts = [NSMutableArray arrayWithCapacity:[gestures count]];
+    for (Gesture *gesture in gestures) {
+        NSDictionary *gestureDict = [gesture dictionaryRepresentation];
+        [gestureDicts addObject:gestureDict];
+    }
+    
+    return [NSDictionary dictionaryWithObject:gestureDicts forKey:@"gestures"];
 }
 
 @end
