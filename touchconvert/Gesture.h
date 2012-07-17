@@ -23,11 +23,13 @@ typedef enum {
 @property (assign, nonatomic) NSTimeInterval endTime;
 @property (readonly, nonatomic) NSArray *touches;
 @property (readonly, nonatomic) NSArray *subgestures;
+@property (readonly, nonatomic) NSPoint startingPoint;
 
 - (void)addTouch:(Touch *)touch;
 - (BOOL)canMergeWithGesture:(Gesture *)gesture;
 - (Gesture *)mergedGestureWithGesture:(Gesture *)gesture;
 - (CGFloat)distanceToLocation:(NSPoint)location;
+- (CGFloat)distanceToRect:(NSRect)rect;
 - (NSDictionary *)dictionaryRepresentation;
 
 @end

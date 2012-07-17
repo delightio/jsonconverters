@@ -59,7 +59,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$PROJECT_DIR/SampleData/session_58955_touchtrack.plist"
+            argument = "$PROJECT_DIR/SampleData/session_59084_touchtrack.plist"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

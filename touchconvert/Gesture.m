@@ -16,6 +16,21 @@ static CGFloat DistanceBetweenPoints(NSPoint p1, NSPoint p2)
     return sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
 }
 
+static CGFloat DistanceBetweenPointAndRect(NSPoint p, NSRect r)
+{
+    if (NSPointInRect(p, r)) return 0.0f;
+    
+    CGFloat dx = (p.x < NSMinX(r) ? NSMinX(r) - p.x : (p.x > NSMaxX(r) ? NSMaxX(r) - p.x : MIN(p.x - NSMinX(r), NSMaxX(r) - p.x)));
+    CGFloat dy = (p.y < NSMinY(r) ? NSMinY(r) - p.y : (p.y > NSMaxY(r) ? NSMaxY(r) - p.y : MIN(p.y - NSMinY(r), NSMaxY(r) - p.y)));
+    
+    return sqrt(dx * dx + dy * dy);
+}
+
+static CGFloat DistanceBetweenCenterPointsInRects(NSRect r1, NSRect r2)
+{
+    return DistanceBetweenPoints(NSMakePoint(NSMidX(r1), NSMidY(r1)), NSMakePoint(NSMidX(r2), NSMidY(r2)));
+}
+
 @implementation Gesture {
     NSMutableArray *mutableTouches;
     NSMutableArray *mutableSubgestures;
@@ -60,7 +75,7 @@ static CGFloat DistanceBetweenPoints(NSPoint p1, NSPoint p2)
     [mutableTouches addObject:touch];
     
     // Have we exceeded the threshold for a swipe?
-    if ([self distanceToLocation:[[mutableTouches objectAtIndex:0] location]] > kSwipeDistanceThreshold) {
+    if ([self distanceToLocation:self.startingPoint] > kSwipeDistanceThreshold) {
         self.type = GestureTypeSwipe;
     } else if ((touch.phase == TouchPhaseEnded || touch.phase == TouchPhaseCancelled) && self.type == GestureTypeUnknown) {
         self.type = GestureTypeTap;
@@ -130,14 +145,46 @@ static CGFloat DistanceBetweenPoints(NSPoint p1, NSPoint p2)
     return mergedGesture;
 }
 
+- (NSPoint)startingPoint
+{
+    if ([mutableTouches count] == 0) {
+        return NSZeroPoint;
+    }
+    
+    Touch *startingTouch = [mutableTouches objectAtIndex:0];
+    if ([startingTouch isPrivateTouch]) {
+        return NSMakePoint(NSMidX(startingTouch.privateFrame), NSMidY(startingTouch.privateFrame));
+    } else {
+        return startingTouch.location;
+    }
+}
+
 - (CGFloat)distanceToLocation:(NSPoint)location
 {
     if ([mutableTouches count] == 0) {
         return -1.0f;
     }
     
-    NSPoint lastTouchLocation = [[mutableTouches lastObject] location];
-    return DistanceBetweenPoints(location, lastTouchLocation);
+    Touch *lastTouch = [mutableTouches lastObject];
+    if ([lastTouch isPrivateTouch]) {
+        return DistanceBetweenPointAndRect(location, lastTouch.privateFrame);
+    } else {
+        return DistanceBetweenPoints(location, lastTouch.location);
+    }
+}
+
+- (CGFloat)distanceToRect:(NSRect)rect
+{
+    if ([mutableTouches count] == 0) {
+        return -1.0f;
+    }
+    
+    Touch *lastTouch = [mutableTouches lastObject];
+    if ([lastTouch isPrivateTouch]) {
+        return DistanceBetweenCenterPointsInRects(rect, lastTouch.privateFrame);
+    } else {
+        return DistanceBetweenPointAndRect(lastTouch.location, rect);
+    }
 }
 
 - (NSString *)typeString

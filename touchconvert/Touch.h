@@ -20,10 +20,13 @@ typedef enum {
 
 @property (assign, nonatomic) NSPoint location;
 @property (assign, nonatomic) NSPoint previousLocation;
+@property (assign, nonatomic) NSRect privateFrame;
+@property (assign, nonatomic, getter=isPrivateTouch) BOOL privateTouch;
 @property (assign, nonatomic) TouchPhase phase;
 @property (assign, nonatomic) NSTimeInterval time;
 @property (assign, nonatomic) NSInteger sequenceID;
 
 - (id)initWithLocation:(NSPoint)location previousLocation:(NSPoint)previousLocation phase:(TouchPhase)phase time:(NSTimeInterval)time sequenceID:(NSInteger)sequenceID;
+- (id)initWithPrivateFrame:(NSRect)privateFrame phase:(TouchPhase)phase time:(NSTimeInterval)time sequenceID:(NSInteger)sequenceID;
 
 @end

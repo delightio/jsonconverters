@@ -12,6 +12,8 @@
 
 @synthesize location = _location;
 @synthesize previousLocation = _previousLocation;
+@synthesize privateFrame = _privateFrame;
+@synthesize privateTouch = _privateTouch;
 @synthesize phase = _phase;
 @synthesize time = _time;
 @synthesize sequenceID = _sequenceID;
@@ -22,6 +24,23 @@
     if (self) {
         self.location = location;
         self.previousLocation = previousLocation;
+        self.privateFrame = NSZeroRect;
+        self.privateTouch = NO;
+        self.phase = phase;
+        self.time = time;
+        self.sequenceID = sequenceID;
+    }
+    return self;
+}
+
+- (id)initWithPrivateFrame:(NSRect)privateFrame phase:(TouchPhase)phase time:(NSTimeInterval)time sequenceID:(NSInteger)sequenceID
+{
+    self = [super init];
+    if (self) {
+        self.location = NSZeroPoint;
+        self.previousLocation = NSZeroPoint;
+        self.privateFrame = privateFrame;
+        self.privateTouch = YES;
         self.phase = phase;
         self.time = time;
         self.sequenceID = sequenceID;

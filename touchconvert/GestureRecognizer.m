@@ -77,7 +77,7 @@
     Gesture *likelyGesture = nil;
     CGFloat minDistance = -1.0f;
     for (Gesture *gesture in gestures) {
-        CGFloat distance = [gesture distanceToLocation:touch.previousLocation];
+        CGFloat distance = ([touch isPrivateTouch] ? [gesture distanceToRect:touch.privateFrame] : [gesture distanceToLocation:touch.previousLocation]);
         if (minDistance < 0 || distance < minDistance) {
             likelyGesture = gesture;
             minDistance = distance;

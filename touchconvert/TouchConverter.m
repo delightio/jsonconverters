@@ -18,11 +18,19 @@
     NSArray *touchDicts = [inputDictionary objectForKey:@"touches"];
     NSMutableArray *touches = [NSMutableArray arrayWithCapacity:[touchDicts count]];
     for (NSDictionary *touchDict in touchDicts) {
-        Touch *touch = [[Touch alloc] initWithLocation:NSPointFromString([touchDict objectForKey:@"curLoc"]) 
-                                      previousLocation:NSPointFromString([touchDict objectForKey:@"prevLoc"]) 
-                                                 phase:[[touchDict objectForKey:@"phase"] intValue] 
-                                                  time:[[touchDict objectForKey:@"time"] doubleValue]
-                                            sequenceID:[[touchDict objectForKey:@"seq"] integerValue]];
+        Touch *touch;
+        if ([touchDict objectForKey:@"privateFrame"]) {
+            touch = [[Touch alloc] initWithPrivateFrame:NSRectFromString([touchDict objectForKey:@"privateFrame"])
+                                                  phase:[[touchDict objectForKey:@"phase"] intValue]
+                                                   time:[[touchDict objectForKey:@"time"] doubleValue]
+                                             sequenceID:[[touchDict objectForKey:@"seq"] integerValue]];
+        } else {
+            touch = [[Touch alloc] initWithLocation:NSPointFromString([touchDict objectForKey:@"curLoc"])
+                                   previousLocation:NSPointFromString([touchDict objectForKey:@"prevLoc"])
+                                              phase:[[touchDict objectForKey:@"phase"] intValue]
+                                               time:[[touchDict objectForKey:@"time"] doubleValue]
+                                         sequenceID:[[touchDict objectForKey:@"seq"] integerValue]];
+        }
         [touches addObject:touch];
     }
     
