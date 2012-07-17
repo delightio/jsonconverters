@@ -17,7 +17,7 @@
 
     // Gestures available to link a touch with for a UIEvent
     NSMutableArray *availableGestures = [[NSMutableArray alloc] init];
-    int sequenceId = -1;
+    NSInteger sequenceId = -1;
     
     for (Touch *touch in touches) {
         // New UIEvent
@@ -31,8 +31,10 @@
             case TouchPhaseBegan: {
                 // Start of a new gesture
                 Gesture *gesture = [[Gesture alloc] init];
-                [gesture addTouch:touch];
-                [gesturesInProgress addObject:gesture];
+                if (gesture) {
+                    [gesture addTouch:touch];
+                    [gesturesInProgress addObject:gesture];
+                }
                 break;
             }
                             
@@ -40,8 +42,10 @@
             case TouchPhaseStationary: {
                 // Continuation of an existing gesture
                 Gesture *gesture = [self likeliestGestureForTouch:touch inArray:availableGestures];
-                [gesture addTouch:touch];
-                [availableGestures removeObject:gesture];
+                if (gesture) {
+                    [gesture addTouch:touch];
+                    [availableGestures removeObject:gesture];
+                }
                 break;
             }
                 
@@ -49,10 +53,12 @@
             case TouchPhaseCancelled: {
                 // End of an existing gesture
                 Gesture *gesture = [self likeliestGestureForTouch:touch inArray:availableGestures];
-                [gesture addTouch:touch];
-                [availableGestures removeObject:gesture];
-                [gesturesCompleted addObject:gesture];
-                [gesturesInProgress removeObject:gesture];
+                if (gesture) {
+                    [gesture addTouch:touch];
+                    [availableGestures removeObject:gesture];
+                    [gesturesCompleted addObject:gesture];
+                    [gesturesInProgress removeObject:gesture];
+                }
                 break;
             }
         }

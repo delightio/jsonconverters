@@ -47,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8382053215B5E8F900FCACD3 /* session_58955_touchtrack.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = session_58955_touchtrack.plist; sourceTree = "<group>"; };
 		83847A5B15B0AA27007AB04B /* Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gesture.h; sourceTree = "<group>"; };
 		83847A5C15B0AA27007AB04B /* Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gesture.m; sourceTree = "<group>"; };
 		83847A6A15B0ADAC007AB04B /* Touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Touch.h; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				83A1BCE115B4B067003C0F5E /* session_54289_touchtrack.plist */,
+				8382053215B5E8F900FCACD3 /* session_58955_touchtrack.plist */,
 				83E1C46A15B4DB4000FAAE4E /* session_54289_eventtrack.plist */,
 			);
 			name = "Sample Data";

@@ -46,6 +46,7 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      enableOpenGLFrameCaptureMode = "0"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
@@ -58,7 +59,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$PROJECT_DIR/SampleData/session_54289_touchtrack.plist"
+            argument = "$PROJECT_DIR/SampleData/session_58955_touchtrack.plist"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
